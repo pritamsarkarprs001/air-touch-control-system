@@ -2,13 +2,13 @@
 
 An advanced, real-time spatial computing interface that transforms any standard webcam into an interactive AI trackpad. By leveraging deep learning architectures for high-fidelity hand-gesture recognition and stateful OS automation, this system enables complete touchless execution of desktop controls including precision movement, stateful dragging, rate-based scrolling, and dynamic zooming.
 
-
+---
 
 ## 🛠️ System Architecture & Directory Layout
 
 The project follows a modular, clean Python convention optimized for deployment and version control.
 
-
+```text
 air-touch-control-system/
 │
 ├── dist/                   # Compiled standalone executables (Production builds)
@@ -16,7 +16,7 @@ air-touch-control-system/
 ├── .gitignore              # Project environment exclusion ruleset
 ├── main.py                 # Core application script (State Engine & CV Pipeline)
 └── README.md               # Complete project documentation and operation manual
-
+```
 
 ### File & Directory Descriptions
 
@@ -25,7 +25,7 @@ air-touch-control-system/
 * **`.gitignore`**: Explicitly instructs Git to exclude the heavyweight `venv/` binaries, compiled `__pycache__` buffers, and temporary PyInstaller `.spec` metadata sheets from being pushed to the remote repository.
 * **`venv/`**: Holds local instances of execution wheels and environmental dependencies, protecting system-level Python installations from conflicts.
 
-
+---
 
 ## 🔬 Deep Technical Features & Engineering Data
 
@@ -54,8 +54,7 @@ To solve the **"Air Clutch"** dilemma (where resetting hand positions reverses a
 
 This mathematical abstraction allows hands to remain entirely motionless in physical space while the underlying OS continues scrolling or zooming indefinitely based on vector displacement length.
 
-
-
+---
 
 ## 🎛️ Complete Manual of Usage
 
@@ -69,7 +68,7 @@ The application windows project a real-time, color-coded visual feedback overlay
 * 🟡 **YELLOW (`SCROLLING`)**: Mouse wheels locked into Rate-Based Virtual Joystick.
 * 🟣 **PURPLE (`ZOOMING`)**: OS layer injected with a universal scaling factor interface (`Ctrl + Wheel`).
 
-
+---
 
 ### 📑 The Gesture Command Matrix
 
@@ -81,6 +80,7 @@ The application windows project a real-time, color-coded visual feedback overlay
 | **Joystick Scroll**   | Squeeze **Index** and **Middle Fingers** flush side-by-side (closed peace sign) | `SCROLLING`             | Point 8 + Point 12  |
 | **Joystick Zoom**     | Pinch **Thumb Tip** and **Ring Finger Tip** together tightly                    | `ZOOMING`               | Point 4 + Point 16  |
 
+---
 
 ### 🕹️ Step-by-Step Operator Instructions
 
@@ -106,6 +106,7 @@ The application windows project a real-time, color-coded visual feedback overlay
 * Pull your hand **downward** to scale/zoom out.
 * Separate your fingers to lock onto your chosen zoom tier.
 
+---
 
 ## ⚙️ Dependencies & Installation
 
@@ -120,36 +121,36 @@ The application windows project a real-time, color-coded visual feedback overlay
 
 #### 1. Clone the Repository
 
-
-git clone https://github.com/pritamsarkarprs001/air-touch-control-system.git
+```bash
+git clone https://github.com/YOUR_USERNAME/air-touch-control-system.git
 cd air-touch-control-system
-
+```
 
 #### 2. Build and Initialize a Clean Virtual Environment
 
-
+```powershell
 python -m venv venv
 .\venv\Scripts\activate
-
+```
 
 #### 3. Synchronize Package Dependencies
 
-
+```powershell
 pip install opencv-python pyautogui
 pip install mediapipe==0.10.14
+```
 
-
-
+---
 
 ### Running the System
 
-
+```powershell
 python main.py
-
+```
 
 *To close out of the system cleanly at any point, focus on the camera frame window and press **`q`** on your keyboard.*
 
-
+---
 
 ## 📦 Standalone Compilation Build Instructions
 
@@ -157,20 +158,21 @@ To distribute this platform to target computers lacking native Python installati
 
 ### Install PyInstaller
 
+```powershell
 pip install pyinstaller
-
+```
 
 ### Build Executable
 
-
+```powershell
 pyinstaller --onefile --noconsole --collect-all mediapipe main.py
-
+```
 
 ### Build Output
 
-
+```text
 dist/
 └── main.exe
-
+```
 
 Upon successful pipeline compilation, extract the finalized executable application (`main.exe`) directly from the newly generated `/dist` directory. You can double-click this file to run the program without requiring Python, a terminal, or an IDE.
