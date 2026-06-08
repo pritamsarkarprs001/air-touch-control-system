@@ -122,7 +122,7 @@ The application windows project a real-time, color-coded visual feedback overlay
 #### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/air-touch-control-system.git
+git clone https://github.com/pritamsarkarprs001/air-touch-control-system.git
 cd air-touch-control-system
 ```
 
